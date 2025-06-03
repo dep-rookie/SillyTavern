@@ -1,0 +1,114 @@
+/* Whispering Quill Header */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+.quill-header {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 1.7em;
+  color: #e2b714;
+  text-shadow: 0 0 3px #8b0000;
+  margin-bottom: 8px;
+}
+
+/* Valyrian Signature */
+.valyrian-signature {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 1.4em;
+  color: #ddb67d;
+  text-shadow: 0 0 2px #6c3e00;
+  text-align: right;
+  display: block;
+  margin-top: 12px;
+}
+
+/* Ceremonial Script */
+.ceremonial-script {
+  font-family: 'Tangerine', cursive !important;
+  font-size: 2em;
+  color: #f5e1c0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+  text-shadow: 0 0 4px #a15500;
+  padding: 10px 0;
+}
+
+/* Intimate Letter */
+.intimate-letter {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 1.5em;
+  color: #ffb7b7;
+  text-shadow: 0 0 5px #ab3a3a;
+  line-height: 1.8;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ========== ANIMATED PANEL LOADING ========== */
+.panel, .menu, header, .settings, .chat-panel, .chat-message, .character-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== SMOOTH ELEMENT TRANSITIONS ========== */
+*, *::before, *::after {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out, transform 0.2s ease;
+}
+
+/* ========== TOGGLE SWITCH ANIMATION ========== */
+input[type="checkbox"] {
+  transition: all 0.25s ease-in-out;
+}
+input[type="checkbox"]:checked + label::before {
+  background-color: #ff3c38 !important;
+  box-shadow: 0 0 5px 1px rgba(255, 60, 56, 0.6);
+}
+label.switch {
+  transition: all 0.3s ease;
+}
+
+/* ========== SMOOTH DROPDOWN / SELECT FOCUS ========== */
+select, option {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+select:focus {
+  background-color: #1c1c1c !important;
+  color: #ff3c38 !important;
+  box-shadow: 0 0 6px rgba(255, 60, 56, 0.4) inset;
+}
+
+/* ========== HOVER & ACTIVE TRANSITIONS ON INPUTS ========== */
+input[type="text"], textarea {
+  transition: all 0.3s ease-in-out !important;
+}
+input[type="text"]:focus, textarea:focus {
+  border-color: #a86cf7 !important;
+  box-shadow: 0 0 5px #a86cf7 !important;
+}
+
+/* ========== BUTTON PULSE ON CLICK ========== */
+button:active {
+  animation: clickPulse 0.2s ease-in-out;
+}
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(255, 60, 56, 0.4);
+  }
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 0 12px rgba(255, 60, 56, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(255, 60, 56, 0.4);
+  }
+}
